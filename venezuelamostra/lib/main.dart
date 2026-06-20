@@ -31,11 +31,12 @@ class TelaInicial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tela Inicial'),
+        backgroundColor: Color.fromARGB(255, 254, 216, 0),
+        title: const Text('Apresentação da Venezuela'),
       ),
       
  
-  backgroundColor: Color.fromARGB(255, 252, 255, 96),
+  backgroundColor: Color.fromARGB(255, 90, 178, 255),
   body: Center(
     child: Column( //toda vez que um children de row for fechado vai ter uma nova linha de imagens e botões
      children:[ 
@@ -48,7 +49,7 @@ class TelaInicial extends StatelessWidget {
         child: Column(
           children:[
             Image.asset('assets/bandeira.jpg',width: 300, height: 300,),
-
+            Text('Venha conhecer a cultura da Venezuela!', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
               ]//children
               ),
               ),
@@ -56,15 +57,21 @@ class TelaInicial extends StatelessWidget {
       Expanded( //imagem da parque
         child: Column(
          children:[
-                  Image.asset('assets/henri.jpg',width: 300, height: 300,),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(80), // Define o raio de arredondamento
+                    child: Image.asset('assets/henri.jpg',width: 300, height: 300,),),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 247, 255, 14), 
+                      foregroundColor: const Color.fromARGB(255, 0, 0, 0), 
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const Parque()),
                       );
                     },
-                    child: const Text('Mais informações'),
+                    child: const Text('Parque Henri Pittier'),
                   ),
               ]//children 
               ),
@@ -73,15 +80,22 @@ class TelaInicial extends StatelessWidget {
       Expanded( // imagem do lago
         child: Column(
          children:[
-                  Image.asset('assets/lago.jpg',width: 300, height: 300,),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100), // Define o raio de arredondamento
+                    child: Image.asset('assets/ponte.jpeg',width: 300, height: 300,),
+                  ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 247, 255, 14), 
+                      foregroundColor: const Color.fromARGB(255, 0, 0, 0), 
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const Lago()),
                       );
                     },
-                    child: const Text('Mais informações'),
+                    child: const Text('Lago de Maracaibo'),
                   ),
               ]//children 
               ),
@@ -96,15 +110,21 @@ class TelaInicial extends StatelessWidget {
       Expanded( //imagem do hotel
         child: Column(
           children:[
-            Image.asset('assets/hotel.jpg',width: 300, height: 300,),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(100), // Define o raio de arredondamento
+              child: Image.asset('assets/hotel.jpg',width: 300, height: 300,),),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 247, 255, 14), 
+                      foregroundColor: const Color.fromARGB(255, 0, 0, 0), 
+                    ),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => const Hotel()),
                         );
                       },
-                      child: const Text('Mais informações'),
+                      child: const Text('Hotel Cedral'),
                     ),
               ]//children
               ),
@@ -113,15 +133,23 @@ class TelaInicial extends StatelessWidget {
       Expanded( // imagem dos montes
         child: Column(
          children:[
-                  Image.asset('assets/montes.jpg',width: 300, height: 300,),
+                  
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100), // Define o raio de arredondamento
+                    child: Image.asset('assets/montes.jpg',width: 300, height: 300,),
+                  ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 247, 255, 14), 
+                      foregroundColor: const Color.fromARGB(255, 0, 0, 0), 
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const pagMontanha()),
                       );
                     },
-                    child: const Text('Mais informações'),
+                    child: const Text('Tepuis de Canaima'),
                   ),
               ]//children 
               ),
@@ -129,15 +157,22 @@ class TelaInicial extends StatelessWidget {
       Expanded( // imagem da comida
         child: Column(
          children:[
-                  Image.asset('assets/Prato.jpg',width: 320, height: 320,),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(120), // Define o raio de arredondamento
+                    child: Image.asset('assets/Prato.jpg',width: 320, height: 320,),
+                  ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 247, 255, 14), 
+                      foregroundColor: const Color.fromARGB(255, 0, 0, 0), 
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const pagPrato()),
                       );
                     },
-                    child: const Text('Mais informações'),
+                    child: const Text('Pabellón Criollo'),
                   ),
               ]//children 
               ),
